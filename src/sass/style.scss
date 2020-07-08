@@ -3,10 +3,25 @@ $btn-color: #f8af01;
 $bg-color: #f5f5f5;
 $negative-check: #ff0000;
 $positive-check: #458a27;
+$border-input: #dddddd;
+
+@font-face {
+	font-family: 'ProximaNovaRegular';
+	src: url('../fonts/Proxima Nova Regular.otf');
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'ProximaNovaBold';
+	src: url('../fonts/Proxima Nova Bold.otf');
+	font-weight: bold;
+}
 
 // Basic Settings
 html {
 	font-size: 10px;
+	font-family: 'ProximaNovaRegular', sans-serif;
+	font-weight: normal;
 }
 
 .button {
@@ -16,15 +31,93 @@ html {
 	padding: 1rem 3rem;
 	border-radius: 8px;
 	text-transform: uppercase;
+	font-size: 1.2rem;
 }
 // Typography
 section {
 	padding: 10rem 0;
 }
 
+.container {
+	min-width: 1276px;
+}
+
 // main
-main {
-	padding: 3rem 0;
+.main {
+	padding: 3rem 0 5rem;
+	background: url('../img/Header-bg.jpg')center center no-repeat;
+	background-size: cover;
+	&-content {
+		margin-top: 10rem;
+		h1 {
+			margin-bottom: 4rem;
+			font-weight: bold;;
+			font-size: 4rem;
+			text-transform: uppercase;
+			line-height: 1.45;
+		}
+		span {
+			display: inline-block;
+			padding: 3rem 5rem;
+			font-size: 1.8rem;
+			background-color: $base-color;
+			color: #fff;
+			text-align: center;
+			strong {
+				font-size: 4rem;
+				font-weight: bold;
+			}
+		}
+	}
+	&-subtitle {
+		margin-bottom: 5rem;
+		font-size: 2.4rem;
+	}
+	&-trigger {
+		display: block;
+		margin-top: 3rem;
+		font-size: 2.2rem;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	&-form {
+		background-color: #fff;
+		padding: 4rem 5rem;
+		text-align: center;
+		&-header {
+			margin-bottom: 4rem;
+			font-size: 1.6rem;
+			strong {
+				font-size: 1.8rem;
+			}
+		}
+		&-input{
+			display: block;
+			border: 1px solid $border-input;
+			width: 100%;
+			padding: 1.5rem;
+			margin: 2rem 0;
+		}
+		label {
+			display: inline-block;
+			background-color: #fff;
+			padding: 0.5rem;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+		}
+		&-btn {
+			display: block;
+			height: 5.5rem;
+			width: 100%;
+			font-size: 1.6rem;
+		}
+		small {
+			display: block;
+			font-size: 1.4rem;
+			margin-top: 1.5rem;
+		}
+	}
 }
 .header {
 	height: 7rem;
@@ -37,6 +130,7 @@ main {
 	&-block {
 		display: table-cell;
 		vertical-align: middle;
+		text-align: right;
 	}
 }
 
